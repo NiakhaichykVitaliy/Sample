@@ -4,5 +4,7 @@
     <string name="password">Password</string>
     <string name="login">login</string>
     <string name="hello">Hello</string>
+    <string name="login_username_error">Please enter username</string>
+    <string name="login_password_error">Please enter password</string>
 
 </resources>

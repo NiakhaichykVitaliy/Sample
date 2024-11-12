@@ -11,11 +11,9 @@
         android:src="@drawable/bg_vk" />
 
     <LinearLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".LoginActivity">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/username_input"
