@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // EdgeToEdge.enable(this);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
         usernameInput = findViewById(R.id.username_input);
@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(this, R.string.login_password_error, Toast.LENGTH_SHORT);
                 toast.show();
             } else {
-                MainActivity.intent(this);
+                MainActivity.startMainActivity(this);
                 finish();
             }
         });
