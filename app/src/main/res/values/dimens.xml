@@ -4,5 +4,7 @@
     <dimen name="login_medium">100dp</dimen>
     <dimen name="login_large">180dp</dimen>
     <dimen name="login_output_padding">18dp</dimen>
+    <dimen name="corner_radius">15dp</dimen>
+    <dimen name="rouned_corner_width">1dp</dimen>
 
 </resources>
