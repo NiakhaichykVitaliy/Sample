@@ -1,8 +1,6 @@
 package com.example.sample;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,15 +24,14 @@ public class LoginActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.password_input);
         button = findViewById(R.id.login_btn);
         button.setOnClickListener(view -> {
-            if (usernameInput.getText().length() == 0) {
-                Toast toast = Toast.makeText(this, R.string.login_username_error, Toast.LENGTH_SHORT);
-                toast.show();
-            } else if (passwordInput.getText().length() == 0) {
-                Toast toast = Toast.makeText(this, R.string.login_password_error, Toast.LENGTH_SHORT);
-                toast.show();
-            } else {
+            final boolean isUsernameEmpty = usernameInput.getText().length() == 0;
+            final boolean isPasswordEmpty = passwordInput.getText().length() == 0;
+            if (!isUsernameEmpty && !isPasswordEmpty) {
                 MainActivity.startMainActivity(this);
                 finish();
+            } else {
+                final int errorRes = isUsernameEmpty ? R.string.login_username_error : R.string.login_password_error;
+                Toast.makeText(this, errorRes, Toast.LENGTH_SHORT).show();
             }
         });
     }
