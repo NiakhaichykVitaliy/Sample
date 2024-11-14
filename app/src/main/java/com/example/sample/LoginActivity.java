@@ -24,8 +24,8 @@ public class LoginActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.password_input);
         button = findViewById(R.id.login_btn);
         button.setOnClickListener(view -> {
-            final boolean isUsernameEmpty = usernameInput.toString().isEmpty();
-            final boolean isPasswordEmpty = passwordInput.toString().isEmpty();
+            final boolean isUsernameEmpty = usernameInput.getText().toString().isEmpty();
+            final boolean isPasswordEmpty = passwordInput.getText().toString().isEmpty();
             if (!isUsernameEmpty && !isPasswordEmpty) {
                 MainActivity.startMainActivity(this);
                 finish();
