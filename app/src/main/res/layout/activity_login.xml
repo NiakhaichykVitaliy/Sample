@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_vk" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/login_small"
+            android:layout_marginTop="@dimen/login_large"
+            android:layout_marginBottom="@dimen/login_small"
+            android:background="@drawable/rouned_corner"
+            android:hint="@string/user_name"
+            android:inputType="text"
+            android:padding="@dimen/login_output_padding"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/login_small"
+            android:background="@drawable/rouned_corner"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/login_output_padding"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/login_small"
+            android:layout_marginTop="@dimen/login_medium"
+            android:backgroundTint="@color/white"
+            android:text="@string/login"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</FrameLayout>
