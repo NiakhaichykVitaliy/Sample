@@ -32,7 +32,8 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.glide)
+    implementation(libs.recyclerview)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
