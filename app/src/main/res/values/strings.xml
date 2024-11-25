@@ -7,25 +7,4 @@
     <string name="login_username_error">Please enter username</string>
     <string name="login_password_error">Please enter password</string>
     <string name="title_list_pokemon">Pokemon</string>
-    <string name="picachu">Picachu</string>
-    <string name="picachu_image">https://www.film.ru/sites/default/files/images/10(186).jpg</string>
-    <string name="scyther">Scyther</string>
-    <string name="scyther_image">https://www.film.ru/sites/default/files/images/Scyther.jpg</string>
-    <string name="alakazam">Alakazam</string>
-    <string name="alakazam_image">https://www.film.ru/sites/default/files/images/mega_alakazam_by_axemeagain-d6rctml.jpg</string>
-    <string name="gyarados">Gyarados</string>
-    <string name="gyarados_image">https://www.film.ru/sites/default/files/images/gyarados-25.jpg</string>
-    <string name="gendar">Gendar</string>
-    <string name="gendar_image">https://www.film.ru/sites/default/files/images/_94_gengar_by_jackspade2012-d6jjpjx.jpg</string>
-    <string name="dragonite">Dragonite</string>
-    <string name="dragonite_image">https://www.film.ru/sites/default/files/images/Dragonite4.jpg</string>
-    <string name="blastoise">Blastoise</string>
-    <string name="blastoise_image">https://www.film.ru/sites/default/files/images/009_blastoise_render_by_luigicuau10-d8e6hqa.jpg</string>
-    <string name="charizard">Charizard</string>
-    <string name="charizard_image">https://www.film.ru/sites/default/files/images/006Charizard_Pokemon_Ranger.jpg</string>
-    <string name="charmander">Charmander</string>
-    <string name="charmander_image">https://cdn.trend.az/2016/07/21/pokemon_210716_01.jpg</string>
-    <string name="bulbasau">Bulbasau</string>
-    <string name="bulbasau_image">https://img.revda-info.ru/wp-content/uploads/2016/07/Ivysaur.png</string>
-
 </resources>

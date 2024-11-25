@@ -6,5 +6,5 @@
     <dimen name="login_output_padding">18dp</dimen>
     <dimen name="corner_radius">15dp</dimen>
     <dimen name="rouned_corner_width">1dp</dimen>
-    <dimen name="image_size">80dp</dimen>
+    <dimen name="pokemon_image_size">80dp</dimen>
 </resources>
