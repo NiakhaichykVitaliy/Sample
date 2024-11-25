@@ -16,8 +16,9 @@ import java.util.List;
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder> {
     private List<Pokemon> pokemonList;
 
-    public PokemonAdapter(List<Pokemon> pokemonList) {
+    public void setPokemonList(List<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
+        notifyDataSetChanged();
     }
 
     public static class PokemonViewHolder extends RecyclerView.ViewHolder {
@@ -28,6 +29,14 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
             super(itemView);
             pokemonName = itemView.findViewById(R.id.pokemon_name);
             pokemonImage = itemView.findViewById(R.id.pokemon_image);
+        }
+
+        public void bind(Pokemon pokemon) {
+            pokemonName.setText(pokemon.getNamePokemon());
+            Glide.with(itemView.getContext())
+                    .load(pokemon.getImagePokemon())
+                    .circleCrop()
+                    .into(pokemonImage);
         }
     }
 
@@ -41,11 +50,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     @Override
     public void onBindViewHolder(@NonNull PokemonAdapter.PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonList.get(position);
-        holder.pokemonName.setText(pokemon.getNamePokemon());
-        Glide.with(holder.itemView.getContext())
-                .load(pokemon.getImagePokemon())
-                .circleCrop()
-                .into(holder.pokemonImage);
+        holder.bind(pokemon);
     }
 
     @Override

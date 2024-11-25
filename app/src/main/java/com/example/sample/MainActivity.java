@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         pokemonList.add(new Pokemon(15, "Gendar", "https://www.film.ru/sites/default/files/images/_94_gengar_by_jackspade2012-d6jjpjx.jpg"));
         pokemonList.add(new Pokemon(16, "Dragonite", "https://www.film.ru/sites/default/files/images/Dragonite4.jpg"));
 
-        adapter = new PokemonAdapter(pokemonList);
+        adapter.setPokemonList(pokemonList);
         recyclerView.setAdapter(adapter);
     }
 
