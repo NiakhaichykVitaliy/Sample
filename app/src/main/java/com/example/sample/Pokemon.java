@@ -15,7 +15,23 @@ public class Pokemon {
         return namePokemon;
     }
 
+    public void setNamePokemon(String namePokemon) {
+        this.namePokemon = namePokemon;
+    }
+
     public String getImagePokemon() {
         return imagePokemon;
+    }
+
+    public void setImagePokemon(String imagePokemon) {
+        this.imagePokemon = imagePokemon;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
