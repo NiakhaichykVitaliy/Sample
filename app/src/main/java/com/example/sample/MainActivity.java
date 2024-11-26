@@ -3,47 +3,24 @@ package com.example.sample;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-import java.util.List;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private PokemonAdapter adapter;
-    private List<Pokemon> pokemonList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        pokemonList = new ArrayList<>();
-        pokemonList.add(new Pokemon(1, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"));
-        pokemonList.add(new Pokemon(2, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"));
-        pokemonList.add(new Pokemon(3, "Alakazam", "https://www.film.ru/sites/default/files/images/mega_alakazam_by_axemeagain-d6rctml.jpg"));
-        pokemonList.add(new Pokemon(4, "Gyarados", "https://www.film.ru/sites/default/files/images/gyarados-25.jpg"));
-        pokemonList.add(new Pokemon(5, "Gendar", "https://www.film.ru/sites/default/files/images/_94_gengar_by_jackspade2012-d6jjpjx.jpg"));
-        pokemonList.add(new Pokemon(6, "Dragonite", "https://www.film.ru/sites/default/files/images/Dragonite4.jpg"));
-        pokemonList.add(new Pokemon(7, "Blastoise", "https://www.film.ru/sites/default/files/images/009_blastoise_render_by_luigicuau10-d8e6hqa.jpg"));
-        pokemonList.add(new Pokemon(8, "Charmander", "https://cdn.trend.az/2016/07/21/pokemon_210716_01.jpg"));
-        pokemonList.add(new Pokemon(9, "Charizard", "https://www.film.ru/sites/default/files/images/006Charizard_Pokemon_Ranger.jpg"));
-        pokemonList.add(new Pokemon(10, "Bulbasau", "https://img.revda-info.ru/wp-content/uploads/2016/07/Ivysaur.png"));
-        pokemonList.add(new Pokemon(11, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"));
-        pokemonList.add(new Pokemon(12, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"));
-        pokemonList.add(new Pokemon(13, "Alakazam", "https://www.film.ru/sites/default/files/images/mega_alakazam_by_axemeagain-d6rctml.jpg"));
-        pokemonList.add(new Pokemon(14, "Gyarados", "https://www.film.ru/sites/default/files/images/gyarados-25.jpg"));
-        pokemonList.add(new Pokemon(15, "Gendar", "https://www.film.ru/sites/default/files/images/_94_gengar_by_jackspade2012-d6jjpjx.jpg"));
-        pokemonList.add(new Pokemon(16, "Dragonite", "https://www.film.ru/sites/default/files/images/Dragonite4.jpg"));
 
-        adapter.setPokemonList(pokemonList);
-        recyclerView.setAdapter(adapter);
+        PokemonFragment pokemonFragment = new PokemonFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, pokemonFragment);
+        fragmentTransaction.commit();
     }
 
     static void startMainActivity(Context context) {
