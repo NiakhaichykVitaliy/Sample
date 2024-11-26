@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -20,16 +20,13 @@ public class PokemonFragment extends Fragment {
     private List<Pokemon> pokemonList;
     private Toolbar toolbar;
 
-    public PokemonFragment() {
-
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pokemon, container, false);
 
-       /* toolbar = view.findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.title_list_pokemon);*/
+        toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.title_list_pokemon);
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
