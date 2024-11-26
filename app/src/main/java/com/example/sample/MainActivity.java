@@ -3,7 +3,6 @@ package com.example.sample;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
