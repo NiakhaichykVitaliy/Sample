@@ -18,7 +18,6 @@ import java.util.List;
 public class PokemonFragment extends Fragment {
     private RecyclerView recyclerView;
     private PokemonAdapter adapter;
-    private List<Pokemon> pokemonList;
     private Toolbar toolbar;
 
 
@@ -32,7 +31,7 @@ public class PokemonFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        pokemonList = new ArrayList<>();
+        List<Pokemon> pokemonList = new ArrayList<>();
         pokemonList.add(new Pokemon(1, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"));
         pokemonList.add(new Pokemon(2, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"));
         pokemonList.add(new Pokemon(3, "Alakazam", "https://www.film.ru/sites/default/files/images/mega_alakazam_by_axemeagain-d6rctml.jpg"));

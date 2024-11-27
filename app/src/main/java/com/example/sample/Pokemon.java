@@ -2,29 +2,29 @@ package com.example.sample;
 
 public class Pokemon {
     private int id;
-    private String namePokemon;
-    private String imagePokemon;
+    private String name;
+    private String image;
 
-    public Pokemon(int id, String namePokemon, String imagePokemon) {
+    public Pokemon(int id, String name, String image) {
         this.id = id;
-        this.namePokemon = namePokemon;
-        this.imagePokemon = imagePokemon;
+        this.name = name;
+        this.image = image;
     }
 
-    public String getNamePokemon() {
-        return namePokemon;
+    public String getName() {
+        return name;
     }
 
-    public void setNamePokemon(String namePokemon) {
-        this.namePokemon = namePokemon;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getImagePokemon() {
-        return imagePokemon;
+    public String getImage() {
+        return image;
     }
 
-    public void setImagePokemon(String imagePokemon) {
-        this.imagePokemon = imagePokemon;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getId() {

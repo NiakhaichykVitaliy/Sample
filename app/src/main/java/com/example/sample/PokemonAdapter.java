@@ -21,25 +21,6 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         notifyDataSetChanged();
     }
 
-    public static class PokemonViewHolder extends RecyclerView.ViewHolder {
-        public TextView pokemonName;
-        public ImageView pokemonImage;
-
-        public PokemonViewHolder(@NonNull View itemView) {
-            super(itemView);
-            pokemonName = itemView.findViewById(R.id.pokemon_name);
-            pokemonImage = itemView.findViewById(R.id.pokemon_image);
-        }
-
-        public void bind(Pokemon pokemon) {
-            pokemonName.setText(pokemon.getNamePokemon());
-            Glide.with(itemView.getContext())
-                    .load(pokemon.getImagePokemon())
-                    .circleCrop()
-                    .into(pokemonImage);
-        }
-    }
-
     @NonNull
     @Override
     public PokemonAdapter.PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -56,5 +37,24 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     @Override
     public int getItemCount() {
         return pokemonList.size();
+    }
+
+    public static class PokemonViewHolder extends RecyclerView.ViewHolder {
+        public TextView pokemonName;
+        public ImageView pokemonImage;
+
+        public PokemonViewHolder(@NonNull View itemView) {
+            super(itemView);
+            pokemonName = itemView.findViewById(R.id.pokemon_name);
+            pokemonImage = itemView.findViewById(R.id.pokemon_image);
+        }
+
+        public void bind(Pokemon pokemon) {
+            pokemonName.setText(pokemon.getName());
+            Glide.with(itemView.getContext())
+                    .load(pokemon.getImage())
+                    .circleCrop()
+                    .into(pokemonImage);
+        }
     }
 }
