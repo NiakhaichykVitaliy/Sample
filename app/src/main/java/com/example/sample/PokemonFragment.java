@@ -26,7 +26,6 @@ public class PokemonFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pokemon, container, false);
 
         toolbar = view.findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.title_list_pokemon);
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

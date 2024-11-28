@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         PokemonFragment pokemonFragment = PokemonFragment.getInstance();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, pokemonFragment);
-        fragmentTransaction.commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, pokemonFragment)
+                .commit();
     }
 
     static void startMainActivity(Context context) {
