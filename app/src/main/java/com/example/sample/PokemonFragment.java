@@ -55,13 +55,7 @@ public class PokemonFragment extends Fragment {
         return view;
     }
 
-    private static PokemonFragment instance;
-
     public static PokemonFragment getInstance() {
-        if (instance == null) {
-            instance = new PokemonFragment();
-
-        }
-        return instance;
+        return new PokemonFragment();
     }
 }
