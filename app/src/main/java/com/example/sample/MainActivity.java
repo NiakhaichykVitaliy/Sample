@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         PokemonFragment pokemonFragment = PokemonFragment.getInstance();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, pokemonFragment)
+                .replace(R.id.fragment_container, PokemonViewPagerFragment.getInstance())
                 .commit();
     }
 

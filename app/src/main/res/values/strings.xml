@@ -7,4 +7,6 @@
     <string name="login_username_error">Please enter username</string>
     <string name="login_password_error">Please enter password</string>
     <string name="title_list_pokemon">Pokemon</string>
+    <string name="pokemon_fragment_1">Pokemon Fragment 1</string>
+    <string name="pokemon_fragment_2">Pokemon Fragment 2</string>
 </resources>
