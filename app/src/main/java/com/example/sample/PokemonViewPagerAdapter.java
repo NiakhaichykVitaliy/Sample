@@ -17,10 +17,8 @@ public class PokemonViewPagerAdapter extends FragmentStateAdapter {
         switch (position) {
             case 0:
                 PokemonFragment.getInstance();
-                break;
             case 1:
                 PokemonFragment.getInstance();
-                break;
         }
         return PokemonFragment.getInstance();
     }
