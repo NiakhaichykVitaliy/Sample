@@ -20,12 +20,16 @@ class PokemonFragment2 : Fragment(R.layout.fragment_pokemon) {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         val pokemonList = mutableListOf(
-            Pokemon(1,
+            Pokemon(
+                1,
                 "Picachu",
-                "https://www.film.ru/sites/default/files/images/10(186).jpg"),
-            Pokemon(2,
+                "https://www.film.ru/sites/default/files/images/10(186).jpg"
+            ),
+            Pokemon(
+                2,
                 "Scyther",
-                "https://www.film.ru/sites/default/files/images/Scyther.jpg"),
+                "https://www.film.ru/sites/default/files/images/Scyther.jpg"
+            ),
             Pokemon(
                 3,
                 "Alakazam",
