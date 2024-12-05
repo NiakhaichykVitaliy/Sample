@@ -7,23 +7,21 @@ import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-    public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            EdgeToEdge.enable(this);
-            setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
 
-            PokemonFragment pokemonFragment = PokemonFragment.getInstance();
-            PokemonFragment2 pokemonFragment2 = PokemonFragment2.Companion.getInstance();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, PokemonViewPagerFragment.getInstance())
-                    .commit();
-        }
-
-        static void startMainActivity(Context context) {
-            Intent intent = new Intent(context, MainActivity.class);
-            context.startActivity(intent);
-        }
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, PokemonViewPagerFragment.getInstance())
+                .commit();
     }
+
+    static void startMainActivity(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        context.startActivity(intent);
+    }
+}

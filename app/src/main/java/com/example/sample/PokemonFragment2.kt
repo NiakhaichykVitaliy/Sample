@@ -20,8 +20,16 @@ class PokemonFragment2 : Fragment(R.layout.fragment_pokemon) {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         val pokemonList = mutableListOf(
-            Pokemon(1, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"),
-            Pokemon(2, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"),
+            Pokemon(
+                1,
+                "Picachu",
+                "https://www.film.ru/sites/default/files/images/10(186).jpg"
+            ),
+            Pokemon(
+                2,
+                "Scyther",
+                "https://www.film.ru/sites/default/files/images/Scyther.jpg"
+            ),
             Pokemon(
                 3,
                 "Alakazam",
@@ -47,7 +55,11 @@ class PokemonFragment2 : Fragment(R.layout.fragment_pokemon) {
                 "Blastoise",
                 "https://www.film.ru/sites/default/files/images/009_blastoise_render_by_luigicuau10-d8e6hqa.jpg"
             ),
-            Pokemon(8, "Charmander", "https://cdn.trend.az/2016/07/21/pokemon_210716_01.jpg"),
+            Pokemon(
+                8,
+                "Charmander",
+                "https://cdn.trend.az/2016/07/21/pokemon_210716_01.jpg"
+            ),
             Pokemon(
                 9,
                 "Charizard",
@@ -58,8 +70,16 @@ class PokemonFragment2 : Fragment(R.layout.fragment_pokemon) {
                 "Bulbasaur",
                 "https://img.revda-info.ru/wp-content/uploads/2016/07/Ivysaur.png"
             ),
-            Pokemon(11, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"),
-            Pokemon(12, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"),
+            Pokemon(
+                11,
+                "Picachu",
+                "https://www.film.ru/sites/default/files/images/10(186).jpg"
+            ),
+            Pokemon(
+                12,
+                "Scyther",
+                "https://www.film.ru/sites/default/files/images/Scyther.jpg"
+            ),
             Pokemon(
                 13,
                 "Alakazam",
