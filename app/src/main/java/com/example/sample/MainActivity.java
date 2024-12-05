@@ -14,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        PokemonFragment pokemonFragment = PokemonFragment.getInstance();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, pokemonFragment)
+                .commit();
     }
 
     static void startMainActivity(Context context) {
