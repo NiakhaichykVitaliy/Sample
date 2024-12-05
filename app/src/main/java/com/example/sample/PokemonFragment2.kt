@@ -2,22 +2,15 @@ package com.example.sample
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class PokemonFragment2 : Fragment(R.layout.fragment_pokemon) {
-    private lateinit var recyclerView: RecyclerView
+    private val recyclerView: RecyclerView by lazy { requireView().findViewById(R.id.recycler_view) }
     private lateinit var adapter: PokemonAdapter
-    private lateinit var toolbar: Toolbar
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbar = view.findViewById(R.id.toolbar)
-
-        recyclerView = view.findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(context)
 
         val pokemonList = mutableListOf(
             Pokemon(
