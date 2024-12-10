@@ -14,15 +14,10 @@ public class PokemonViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch (position) {
-            case 0:
-                NewPokemonFragment.Companion.getInstance();
-                break;
-            case 1:
-                PokemonFragment.getInstance();
-                break;
-        }
-        return NewPokemonFragment.Companion.getInstance();
+        return switch (position) {
+            case 1 -> PokemonFragment.getInstance();
+            default -> NewPokemonFragment.Companion.getInstance();
+        };
     }
 
     @Override
