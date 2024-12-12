@@ -37,9 +37,9 @@ android {
 }
 
 dependencies {
-    implementation ("androidx.fragment:fragment-ktx:1.8.5")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0-alpha08")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.0-alpha08")
+    implementation (libs.fragment.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.glide)
     implementation(libs.recyclerview)
     implementation(libs.appcompat)
