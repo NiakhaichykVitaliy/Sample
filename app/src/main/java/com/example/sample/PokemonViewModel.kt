@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class PokemonViewModel : ViewModel() {
 
     private val _pokemonList = MutableLiveData<List<Pokemon>>()
-    val pokemonList: LiveData<List<Pokemon>> get() = _pokemonList
+    val pokemonList: LiveData<List<Pokemon>> = _pokemonList
 
     init {
         val pokemonList = listOf(
