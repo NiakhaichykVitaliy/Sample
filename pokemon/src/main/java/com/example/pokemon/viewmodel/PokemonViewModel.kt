@@ -1,8 +1,9 @@
-package com.example.sample
+package com.example.pokemon.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.pokemon.model.Pokemon
 
 class PokemonViewModel : ViewModel() {
 
@@ -13,7 +14,7 @@ class PokemonViewModel : ViewModel() {
         val pokemonList = listOf(
             Pokemon(
                 1,
-                "Pikachu",
+                "Pikachu1",
                 "https://www.film.ru/sites/default/files/images/10(186).jpg"
             ),
             Pokemon(
