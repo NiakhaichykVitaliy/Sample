@@ -37,6 +37,9 @@ android {
 }
 
 dependencies {
+    implementation (libs.fragment.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.glide)
     implementation(libs.recyclerview)
     implementation(libs.appcompat)
