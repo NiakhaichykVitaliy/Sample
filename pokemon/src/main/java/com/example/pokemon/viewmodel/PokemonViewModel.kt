@@ -14,7 +14,7 @@ class PokemonViewModel : ViewModel() {
         val pokemonList = listOf(
             Pokemon(
                 1,
-                "Pikachu1",
+                "Pikachu",
                 "https://www.film.ru/sites/default/files/images/10(186).jpg"
             ),
             Pokemon(

@@ -34,7 +34,7 @@ public class PokemonFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Pokemon> pokemonList = new ArrayList<>();
-        pokemonList.add(new Pokemon(1, "Picachu", "https://www.film.ru/sites/default/files/images/10(186).jpg"));
+        pokemonList.add(new Pokemon(1, "Picachu1", "https://www.film.ru/sites/default/files/images/10(186).jpg"));
         pokemonList.add(new Pokemon(2, "Scyther", "https://www.film.ru/sites/default/files/images/Scyther.jpg"));
         pokemonList.add(new Pokemon(3, "Alakazam", "https://www.film.ru/sites/default/files/images/mega_alakazam_by_axemeagain-d6rctml.jpg"));
         pokemonList.add(new Pokemon(4, "Gyarados", "https://www.film.ru/sites/default/files/images/gyarados-25.jpg"));

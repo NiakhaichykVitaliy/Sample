@@ -1,9 +1,12 @@
-package com.example.pokemon.ui;
+package com.example.sample;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.pokemon.ui.NewPokemonFragment;
+import com.example.pokemon.ui.PokemonFragment;
 
 public class PokemonViewPagerAdapter extends FragmentStateAdapter {
 
