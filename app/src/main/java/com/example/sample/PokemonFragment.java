@@ -1,4 +1,4 @@
-package com.example.pokemon.ui;
+package com.example.sample;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pokemon.R;
 import com.example.pokemon.model.Pokemon;
+import com.example.pokemon.ui.PokemonAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

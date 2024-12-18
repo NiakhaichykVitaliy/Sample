@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.pokemon.ui.NewPokemonFragment;
-import com.example.pokemon.ui.PokemonFragment;
 
 public class PokemonViewPagerAdapter extends FragmentStateAdapter {
 
