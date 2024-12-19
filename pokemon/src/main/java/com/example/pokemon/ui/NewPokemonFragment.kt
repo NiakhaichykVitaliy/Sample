@@ -1,4 +1,4 @@
-package com.example.sample
+package com.example.pokemon.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokemon.R
+import com.example.pokemon.viewmodel.PokemonViewModel
 
 class NewPokemonFragment : Fragment(R.layout.fragment_pokemon) {
     private val recyclerView: RecyclerView by lazy { requireView().findViewById(R.id.recycler_view) }
