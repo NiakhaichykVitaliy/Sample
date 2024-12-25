@@ -1,5 +1,6 @@
 package com.example.pokemon.ui;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,11 @@ import com.bumptech.glide.Glide;
 import com.example.pokemon.R;
 import com.example.pokemon.model.Pokemon;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder> {
-    private List<Pokemon> pokemonList;
+    private List<Pokemon> pokemonList = new ArrayList<>();
 
     public void setPokemonList(List<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
@@ -33,6 +35,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     @Override
     public void onBindViewHolder(@NonNull PokemonAdapter.PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonList.get(position);
+        Log.d("PokemonAdapter", "Binding pokemon: " + pokemon.getName());
         holder.bind(pokemon);
     }
 

@@ -22,6 +22,7 @@ class NewPokemonFragment : Fragment(R.layout.fragment_pokemon) {
             Observer { pokemonList -> adapter.setPokemonList(pokemonList) })
 
         recyclerView.adapter = adapter
+        pokemonViewModel.fetchPokemonList()
     }
 
     companion object {
