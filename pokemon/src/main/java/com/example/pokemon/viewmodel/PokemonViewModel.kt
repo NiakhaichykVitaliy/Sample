@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.pokemon.api.PokemonApi
+import com.example.pokemon.api.PokemonMapper
 import com.example.pokemon.api.RetrofitClient
 import com.example.pokemon.model.Pokemon
+import com.example.pokemon.model.PokemonResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,17 +18,17 @@ class PokemonViewModel : ViewModel() {
 
     val pokemonApi: PokemonApi = RetrofitClient.retrofit.create(PokemonApi::class.java)
     fun fetchPokemonList() {
-        pokemonApi.getPokemon().enqueue(object : Callback<List<Pokemon>> {
-            override fun onResponse(call: Call<List<Pokemon>>, response: Response<List<Pokemon>>) {
+        pokemonApi.getPokemon().enqueue(object : Callback<List<PokemonResponse>> {
+            override fun onResponse(call: Call<List<PokemonResponse>>, response: Response<List<PokemonResponse>>) {
                 if (response.isSuccessful && response.body() != null) {
-                    _pokemonList.value = response.body()
+                    _pokemonList.value = PokemonMapper.mapToDomain(response.body()!!)
 
                 } else {
                     _pokemonList.value = emptyList()
                 }
             }
 
-            override fun onFailure(call: Call<List<Pokemon>>, t: Throwable) {
+            override fun onFailure(call: Call<List<PokemonResponse>>, t: Throwable) {
                 t.printStackTrace()
             }
         })
