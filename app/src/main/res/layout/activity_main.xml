@@ -20,12 +20,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|top"
             android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            android:backgroundTint="@color/snow"
+            app:rippleColor="@color/grey"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/dark_charcoal" />
 
     </FrameLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:tabIconTint="@color/white"
+        app:tabTextColor="@color/white"
+        app:tabRippleColor="@color/snow"/>
 </LinearLayout>
