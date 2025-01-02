@@ -17,6 +17,7 @@ class PokemonViewModel : ViewModel() {
     val pokemonList: LiveData<List<Pokemon>> = _pokemonList
 
     val pokemonApi: PokemonApi = RetrofitClient.retrofit.create(PokemonApi::class.java)
+
     fun fetchPokemonList() {
         pokemonApi.getPokemon().enqueue(object : Callback<List<PokemonResponse>> {
             override fun onResponse(call: Call<List<PokemonResponse>>, response: Response<List<PokemonResponse>>) {
@@ -32,5 +33,11 @@ class PokemonViewModel : ViewModel() {
                 t.printStackTrace()
             }
         })
+    }
+
+    fun addPokemon(pokemon: Pokemon) {
+        val updatedList = _pokemonList.value.orEmpty().toMutableList()
+        updatedList.add(pokemon)
+        _pokemonList.value = updatedList
     }
 }

@@ -1,3 +1,6 @@
 <resources>
     <string name="title_list_pokemon">Pokemon</string>
+    <string name="dialog_pokemon_name">Enter pokemon name</string>
+    <string name="dialog_fragment_save_pokemon">Save</string>
+    <string name="dialog_fragment_cancel">Cancel</string>
 </resources>

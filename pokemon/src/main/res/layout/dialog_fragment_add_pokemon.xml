@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/add_pokemon_name_dialog_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dialog_fragment_margin_medium"
+        android:backgroundTint="@color/snow"
+        android:hint="@string/dialog_pokemon_name"
+        android:inputType="text"
+        android:padding="@dimen/dialog_fragment_padding_medium"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dialog_fragment_margin_small"
+            android:layout_weight="1"
+            android:backgroundTint="@color/snow"
+            android:gravity="center"
+            android:padding="@dimen/dialog_fragment_padding_small"
+            android:text="@string/dialog_fragment_save_pokemon"
+            android:textColor="@color/dark_charcoal" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dialog_fragment_margin_small"
+            android:layout_weight="1"
+            android:backgroundTint="@color/snow"
+            android:padding="@dimen/dialog_fragment_padding_small"
+            android:text="@string/dialog_fragment_cancel"
+            android:textColor="@color/dark_charcoal" />
+
+    </LinearLayout>
+
+</LinearLayout>
