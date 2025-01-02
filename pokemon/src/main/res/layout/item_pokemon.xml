@@ -24,8 +24,8 @@
             android:id="@+id/pokemon_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/pokemon_item_large"
             android:textColor="@color/black"
             android:textSize="@dimen/pokemon_item_text_size" />
 
