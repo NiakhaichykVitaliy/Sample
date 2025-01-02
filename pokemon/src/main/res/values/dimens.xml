@@ -6,4 +6,8 @@
     <dimen name="item_large">30dp</dimen>
     <dimen name="item_text">16sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dialog_fragment_margin_medium">16dp</dimen>
+    <dimen name="dialog_fragment_padding_medium">16dp</dimen>
+    <dimen name="dialog_fragment_margin_small">4dp</dimen>
+    <dimen name="dialog_fragment_padding_small">4dp</dimen>
 </resources>
