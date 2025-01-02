@@ -7,6 +7,9 @@ android {
     namespace = "com.example.pokemon"
     compileSdk = 34
 
+    viewBinding {
+        enable = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
