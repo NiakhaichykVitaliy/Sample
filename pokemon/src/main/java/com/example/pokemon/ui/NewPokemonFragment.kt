@@ -35,7 +35,7 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
     }
 
     private fun openAddPokemonDialog() {
-        val dialogFragment = DialogFragmentAddPokemon()
+        val dialogFragment = PokemonAddDialogFragment()
         dialogFragment.onSaveCliced = { pokemonName ->
             val newPokemon = Pokemon(name = pokemonName)
             pokemonViewModel.addPokemon(newPokemon)

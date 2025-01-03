@@ -10,9 +10,9 @@ import androidx.fragment.app.DialogFragment
 import com.example.pokemon.R
 import com.example.pokemon.databinding.DialogFragmentAddPokemonBinding
 
-class DialogFragmentAddPokemon : DialogFragment() {
+class PokemonAddDialogFragment : DialogFragment() {
     private val pokemonName: EditText by lazy {
-        requireView().findViewById(R.id.add_pokemon_name_dialog_fragment)
+        requireView().findViewById(R.id.add_pokemon_name_edit_text)
     }
     var onSaveCliced: ((String) -> Unit)? = null
 
@@ -22,16 +22,16 @@ class DialogFragmentAddPokemon : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val bindingBtn = DialogFragmentAddPokemonBinding.inflate(inflater, container, false)
-        bindingBtn.btnSave.setOnClickListener {
+        bindingBtn.addPokemonSaveBtn.setOnClickListener {
             val name = pokemonName.text.toString()
             if (name.isNotEmpty()) {
                 onSaveCliced?.invoke(name)
                 dismiss()
             } else {
-                Toast.makeText(context, "Please, enter name pokemon ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Please, enter pokemon name", Toast.LENGTH_SHORT).show()
             }
         }
-        bindingBtn.btnCancel.setOnClickListener {
+        bindingBtn.addPokemonCloseBtn.setOnClickListener {
             dismiss()
         }
         return bindingBtn.root

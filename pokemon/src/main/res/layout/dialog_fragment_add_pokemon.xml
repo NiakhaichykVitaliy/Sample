@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/add_pokemon_name_dialog_fragment"
+        android:id="@+id/add_pokemon_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/dialog_fragment_margin_medium"
@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/add_pokemon_save_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dialog_fragment_margin_small"
@@ -34,7 +34,7 @@
             android:textColor="@color/dark_charcoal" />
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/add_pokemon_close_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
