@@ -6,17 +6,19 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PokemonRepository(private val pokemonApi: PokemonApi) {
+class PokemonRepository() {
 
-    private val pokemonMapper: PokemonMapper by lazy { PokemonMapper() }
+    private val pokemonApi: PokemonApi = RetrofitClient.retrofit.create(PokemonApi::class.java)
 
     fun fetchPokemonList(callback: (Result<List<Pokemon>>) -> Unit) {
+
         pokemonApi.getPokemon().enqueue(object : Callback<List<PokemonResponse>> {
             override fun onResponse(
                 call: Call<List<PokemonResponse>>,
                 response: Response<List<PokemonResponse>>
             ) {
                 if (response.isSuccessful && response.body() != null) {
+                    val pokemonMapper = PokemonMapper()
                     val mapperPokemonList = pokemonMapper.mapToDomain(response.body()!!)
                     callback(Result.success(mapperPokemonList))
 
@@ -27,6 +29,7 @@ class PokemonRepository(private val pokemonApi: PokemonApi) {
 
             override fun onFailure(call: Call<List<PokemonResponse>>, t: Throwable) {
                 t.printStackTrace()
+                callback(Result.failure(t))
             }
         })
     }
