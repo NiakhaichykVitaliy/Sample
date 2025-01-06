@@ -33,9 +33,9 @@ class PokemonAddDialogFragment : DialogFragment() {
             } else {
                 Toast.makeText(context, "Please, enter pokemon name", Toast.LENGTH_SHORT).show()
             }
-            closeBtn.setOnClickListener {
-                dismiss()
-            }
+        }
+        closeBtn.setOnClickListener {
+            dismiss()
         }
         return view
     }

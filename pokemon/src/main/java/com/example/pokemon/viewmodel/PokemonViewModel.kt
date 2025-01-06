@@ -20,7 +20,10 @@ class PokemonViewModel : ViewModel() {
 
     fun fetchPokemonList() {
         pokemonApi.getPokemon().enqueue(object : Callback<List<PokemonResponse>> {
-            override fun onResponse(call: Call<List<PokemonResponse>>, response: Response<List<PokemonResponse>>) {
+            override fun onResponse(
+                call: Call<List<PokemonResponse>>,
+                response: Response<List<PokemonResponse>>
+            ) {
                 if (response.isSuccessful && response.body() != null) {
                     _pokemonList.value = PokemonMapper.mapToDomain(response.body()!!)
 
@@ -33,6 +36,10 @@ class PokemonViewModel : ViewModel() {
                 t.printStackTrace()
             }
         })
+    }
+    fun getPokemonId(): Int {
+        val currentList = _pokemonList.value ?: emptyList()
+        return ((currentList.maxOfOrNull { it.id } ?: (0 + 1)))
     }
 
     fun addPokemon(pokemon: Pokemon) {

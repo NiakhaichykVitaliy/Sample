@@ -27,7 +27,7 @@ public class PokemonFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
-        View view = inflater.inflate(R.layout.new_fragment_pokemon, container, false);
+        View view = inflater.inflate(com.example.sample.R.layout.fragment_pokemon, container, false);
 
         toolbar = view.findViewById(R.id.toolbar);
 
