@@ -16,7 +16,7 @@ class PokemonViewModel : ViewModel() {
     private val _pokemonList = MutableLiveData<List<Pokemon>>()
     val pokemonList: LiveData<List<Pokemon>> = _pokemonList
 
-    val pokemonApi: PokemonApi = RetrofitClient.retrofit.create(PokemonApi::class.java)
+    private val pokemonApi: PokemonApi = RetrofitClient.retrofit.create(PokemonApi::class.java)
 
     fun fetchPokemonList() {
         pokemonApi.getPokemon().enqueue(object : Callback<List<PokemonResponse>> {

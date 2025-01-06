@@ -36,12 +36,18 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
 
     private fun openAddPokemonDialog() {
         val dialogFragment = PokemonAddDialogFragment()
-        dialogFragment.onSaveCliced = { pokemonName ->
-            val nextId = pokemonViewModel.getPokemonId()
-            val newPokemon = Pokemon(id = nextId, name = pokemonName)
-            pokemonViewModel.addPokemon(newPokemon)
+        parentFragmentManager.setFragmentResultListener(
+            "requestKey",
+            viewLifecycleOwner
+        ) { _, bundle ->
+            val pokemonName = bundle.getString("pokemonName")
+            pokemonName?.let {
+                val nextId = pokemonViewModel.getPokemonId()
+                val newPokemon = Pokemon(id = nextId, name = pokemonName)
+                pokemonViewModel.addPokemon(newPokemon)
+            }
         }
-        dialogFragment.show(childFragmentManager, null)
+        dialogFragment.show(parentFragmentManager, null)
     }
 
     companion object {
