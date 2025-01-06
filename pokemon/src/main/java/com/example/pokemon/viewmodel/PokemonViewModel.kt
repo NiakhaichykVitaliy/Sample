@@ -37,14 +37,13 @@ class PokemonViewModel : ViewModel() {
             }
         })
     }
+
     fun getPokemonId(): Int {
         val currentList = _pokemonList.value ?: emptyList()
         return ((currentList.maxOfOrNull { it.id } ?: (0 + 1)))
     }
 
     fun addPokemon(pokemon: Pokemon) {
-        val updatedList = _pokemonList.value.orEmpty().toMutableList()
-        updatedList.add(pokemon)
-        _pokemonList.value = updatedList
+        _pokemonList.value = _pokemonList.value.orEmpty() + pokemon
     }
 }
