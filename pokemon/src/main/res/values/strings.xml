@@ -3,4 +3,5 @@
     <string name="dialog_pokemon_name">Enter pokemon name</string>
     <string name="dialog_fragment_save_pokemon">Save</string>
     <string name="dialog_fragment_cancel">Cancel</string>
+    <string name="dialog_fragment_enter_pokemon_name">Please, enter pokemon name</string>
 </resources>

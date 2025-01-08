@@ -38,12 +38,8 @@ class PokemonViewModel : ViewModel() {
         })
     }
 
-    fun getPokemonId(): Int {
-        val currentList = _pokemonList.value ?: emptyList()
-        return ((currentList.maxOfOrNull { it.id } ?: (0 + 1)))
-    }
-
-    fun addPokemon(pokemon: Pokemon) {
-        _pokemonList.value = _pokemonList.value.orEmpty() + pokemon
+    fun addPokemon(name: String) {
+        val nextId = _pokemonList.value!!.maxOf { it.id } + 1
+        _pokemonList.value = _pokemonList.value.orEmpty() + Pokemon(id = nextId, name = name)
     }
 }

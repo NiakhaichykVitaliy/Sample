@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/add_pokemon_save_btn"
+            android:id="@+id/add_pokemon_save_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dialog_fragment_margin_small"
@@ -34,7 +34,7 @@
             android:textColor="@color/dark_charcoal" />
 
         <Button
-            android:id="@+id/add_pokemon_close_btn"
+            android:id="@+id/add_pokemon_close_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

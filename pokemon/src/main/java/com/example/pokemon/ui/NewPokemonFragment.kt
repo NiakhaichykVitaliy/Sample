@@ -7,7 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemon.R
-import com.example.pokemon.model.Pokemon
+import com.example.pokemon.utils.Constants
 import com.example.pokemon.viewmodel.PokemonViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
     private val recyclerView: RecyclerView by lazy { requireView().findViewById(R.id.recycler_view) }
     private val adapter: PokemonAdapter by lazy { PokemonAdapter() }
-    private val fabAddPokemon: FloatingActionButton by lazy { requireView().findViewById(R.id.fab_add_pokemon) }
+    private val pokemonAddFab: FloatingActionButton by lazy { requireView().findViewById(R.id.fab_add_pokemon) }
     private val pokemonViewModel: PokemonViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
 
         recyclerView.adapter = adapter
 
-        fabAddPokemon.setOnClickListener {
+        pokemonAddFab.setOnClickListener {
             openAddPokemonDialog()
         }
 
@@ -37,14 +37,12 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
     private fun openAddPokemonDialog() {
         val dialogFragment = PokemonAddDialogFragment()
         parentFragmentManager.setFragmentResultListener(
-            "requestKey",
-            viewLifecycleOwner
+            Constants.REQUEST_NAME,
+            viewLifecycleOwner,
         ) { _, bundle ->
-            val pokemonName = bundle.getString("pokemonName")
+            val pokemonName = bundle.getString(Constants.POKEMON_NAME)
             pokemonName?.let {
-                val nextId = pokemonViewModel.getPokemonId()
-                val newPokemon = Pokemon(id = nextId, name = pokemonName)
-                pokemonViewModel.addPokemon(newPokemon)
+                pokemonViewModel.addPokemon(it)
             }
         }
         dialogFragment.show(parentFragmentManager, null)
