@@ -13,10 +13,11 @@ import com.bumptech.glide.Glide;
 import com.example.pokemon.R;
 import com.example.pokemon.model.Pokemon;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder> {
-    private List<Pokemon> pokemonList;
+    private List<Pokemon> pokemonList = new ArrayList<>();
 
     public void setPokemonList(List<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
