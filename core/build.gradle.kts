@@ -4,12 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.profilemodule"
-    compileSdk = 35
-
-    defaultConfig {
-        minSdk = 24
-    }
+    namespace = "com.example.core"
+    compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -21,7 +17,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
