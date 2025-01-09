@@ -7,10 +7,12 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.profilemodule.LoginActivityLauncher;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements LoginActivityLauncher {
     private ViewPager2 viewPager;
     private TabLayout tabLayout;
     private PokemonViewPagerAdapter viewPagerAdapter;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     tab.setIcon(R.drawable.poke_ball);
                     break;
                 case 1:
-                    tab.setText(R.string.pokemon_fragment_2);
+                    tab.setText(R.string.profile_fragment);
                     tab.setIcon(R.drawable.poke_ball);
                     break;
             }
@@ -45,5 +47,11 @@ public class MainActivity extends AppCompatActivity {
     static void startMainActivity(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
+    }
+
+    @Override
+    public void startLoginActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }
