@@ -9,7 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/profile_margin_medium"
-        android:text="@string/profile_username" />
+        android:gravity="center"
+        android:text="@string/profile_username"
+        android:textSize="@dimen/profile_user_name_text_size" />
 
     <Button
         android:id="@+id/logout_button"
