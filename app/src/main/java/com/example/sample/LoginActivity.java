@@ -9,11 +9,14 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.core.SharedPreferencesManager;
+
 public class LoginActivity extends AppCompatActivity {
     private Button button;
     private EditText usernameInput;
     private EditText passwordInput;
     private SharedPreferences sharedPreferences;
+    private SharedPreferencesManager sharedPreferencesManager;
 
 
     @Override
@@ -22,9 +25,9 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        sharedPreferences = getSharedPreferences(Constants.PREFS_NAME, MODE_PRIVATE);
+        sharedPreferencesManager = new SharedPreferencesManager(this);
 
-        if (sharedPreferences.contains(Constants.USER_NAME)) {
+        if (sharedPreferencesManager.containsUserName()) {
             MainActivity.startMainActivity(this);
         }
 
@@ -35,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             final boolean isUsernameEmpty = usernameInput.getText().toString().isEmpty();
             final boolean isPasswordEmpty = passwordInput.getText().toString().isEmpty();
             if (!isUsernameEmpty && !isPasswordEmpty) {
-                sharedPreferences.edit().putString(Constants.USER_NAME, usernameInput.getText().toString()).apply();
+                sharedPreferencesManager.saveUserName(usernameInput.getText().toString());
                 MainActivity.startMainActivity(this);
                 finish();
             } else {

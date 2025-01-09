@@ -9,7 +9,7 @@ class SharedPreferencesManager(context: Context) {
         context.getSharedPreferences(Constants.PREFS_NAME, Context.MODE_PRIVATE)
 
     fun saveUserName(userName: String) {
-        sharedPreferences.edit().putString(Constants.USER_NAME, userName).commit()
+        sharedPreferences.edit().putString(Constants.USER_NAME, userName).apply()
     }
 
     fun getUserName(): String? {
@@ -17,7 +17,7 @@ class SharedPreferencesManager(context: Context) {
     }
 
     fun removeUserName() {
-        sharedPreferences.edit().remove(Constants.USER_NAME).commit()
+        sharedPreferences.edit().remove(Constants.USER_NAME).apply()
     }
 
     fun containsUserName(): Boolean {
