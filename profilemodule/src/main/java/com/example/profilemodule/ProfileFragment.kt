@@ -31,7 +31,8 @@ class ProfileFragment : Fragment() {
         val userName = sharedPreferencesManager.getUserName()
 
         if (userName != null) {
-            userNameTextView.text = userName
+            userNameTextView.text =
+                getString(R.string.profile_username) + getString(R.string.space) + userName
         } else {
             Toast.makeText(
                 requireContext(),

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="profile_username">Username</string>
+    <string name="profile_username">Username:</string>
     <string name="profile_logout">Logout</string>
     <string name="profile_no_username_found">No username found</string>
+    <string name="space">"  "</string>
 </resources>
