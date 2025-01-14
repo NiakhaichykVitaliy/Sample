@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokemon.R;
 import com.example.pokemon.model.Pokemon;
 import com.example.pokemon.ui.PokemonAdapter;
 
@@ -27,7 +26,7 @@ public class PokemonFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
-        View view = inflater.inflate(com.example.sample.R.layout.fragment_pokemon, container, false);
+        View view = inflater.inflate(R.layout.fragment_pokemon, container, false);
 
         toolbar = view.findViewById(R.id.toolbar);
 
