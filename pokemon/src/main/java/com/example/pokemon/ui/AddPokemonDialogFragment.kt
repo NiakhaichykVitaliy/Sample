@@ -9,9 +9,14 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.pokemon.R
-import com.example.pokemon.utils.Constants
+
 
 class AddPokemonDialogFragment : DialogFragment() {
+
+    companion object Constants {
+        const val REQUEST_NAME = "requestKey"
+        const val POKEMON_NAME = "pokemonName"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,8 +33,8 @@ class AddPokemonDialogFragment : DialogFragment() {
             val name = pokemonNameEditText.text.toString()
             if (name.isNotEmpty()) {
                 parentFragmentManager.setFragmentResult(
-                    Constants.REQUEST_NAME, Bundle().apply {
-                        putString(Constants.POKEMON_NAME, name)
+                    REQUEST_NAME, Bundle().apply {
+                        putString(POKEMON_NAME, name)
                     }
                 )
                 dismiss()

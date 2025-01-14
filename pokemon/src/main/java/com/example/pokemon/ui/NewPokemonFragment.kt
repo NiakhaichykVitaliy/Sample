@@ -7,7 +7,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemon.R
-import com.example.pokemon.utils.Constants
 import com.example.pokemon.viewmodel.PokemonViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -37,10 +36,10 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
     private fun openAddPokemonDialog() {
         val dialogFragment = AddPokemonDialogFragment()
         parentFragmentManager.setFragmentResultListener(
-            Constants.REQUEST_NAME,
+            AddPokemonDialogFragment.REQUEST_NAME,
             viewLifecycleOwner,
         ) { _, bundle ->
-            val pokemonName = bundle.getString(Constants.POKEMON_NAME)
+            val pokemonName = bundle.getString(AddPokemonDialogFragment.POKEMON_NAME)
             pokemonName?.let {
                 pokemonViewModel.addPokemon(it)
             }
