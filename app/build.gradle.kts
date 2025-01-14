@@ -37,7 +37,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":profilemodule"))
     implementation(project(":pokemon"))
+    implementation(project(":core"))
     implementation(libs.fragment.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.livedata.ktx)

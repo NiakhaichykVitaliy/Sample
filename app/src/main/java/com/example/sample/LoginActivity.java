@@ -1,5 +1,6 @@
 package com.example.sample;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,10 +9,14 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.core.SharedPreferencesManager;
+
 public class LoginActivity extends AppCompatActivity {
     private Button button;
     private EditText usernameInput;
     private EditText passwordInput;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferencesManager sharedPreferencesManager;
 
 
     @Override
@@ -20,6 +25,12 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        sharedPreferencesManager = new SharedPreferencesManager(this);
+
+        if (sharedPreferencesManager.containsUserName()) {
+            MainActivity.startMainActivity(this);
+        }
+
         usernameInput = findViewById(R.id.username_input);
         passwordInput = findViewById(R.id.password_input);
         button = findViewById(R.id.login_btn);
@@ -27,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             final boolean isUsernameEmpty = usernameInput.getText().toString().isEmpty();
             final boolean isPasswordEmpty = passwordInput.getText().toString().isEmpty();
             if (!isUsernameEmpty && !isPasswordEmpty) {
+                sharedPreferencesManager.saveUserName(usernameInput.getText().toString());
                 MainActivity.startMainActivity(this);
                 finish();
             } else {

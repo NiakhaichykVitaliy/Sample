@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.pokemon.ui.NewPokemonFragment;
+import com.example.profilemodule.ProfileFragment;
 
 public class PokemonViewPagerAdapter extends FragmentStateAdapter {
 
@@ -17,7 +18,7 @@ public class PokemonViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         return switch (position) {
-            case 1 -> PokemonFragment.getInstance();
+            case 1 -> ProfileFragment.Companion.getInstance();
             default -> NewPokemonFragment.Companion.getInstance();
         };
     }
