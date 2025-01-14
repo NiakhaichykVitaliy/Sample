@@ -39,7 +39,7 @@ class PokemonViewModel : ViewModel() {
     }
 
     fun addPokemon(name: String) {
-        val nextId = _pokemonList.value!!.maxOf { it.id } + 1
+        val nextId = _pokemonList.value?.maxOfOrNull { it.id } ?: 0
         _pokemonList.value = _pokemonList.value.orEmpty() + Pokemon(id = nextId, name = name)
     }
 }

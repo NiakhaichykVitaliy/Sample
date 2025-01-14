@@ -35,7 +35,7 @@ class NewPokemonFragment : Fragment(R.layout.new_fragment_pokemon) {
     }
 
     private fun openAddPokemonDialog() {
-        val dialogFragment = PokemonAddDialogFragment()
+        val dialogFragment = AddPokemonDialogFragment()
         parentFragmentManager.setFragmentResultListener(
             Constants.REQUEST_NAME,
             viewLifecycleOwner,

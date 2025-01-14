@@ -11,7 +11,7 @@ import androidx.fragment.app.DialogFragment
 import com.example.pokemon.R
 import com.example.pokemon.utils.Constants
 
-class PokemonAddDialogFragment : DialogFragment() {
+class AddPokemonDialogFragment : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
