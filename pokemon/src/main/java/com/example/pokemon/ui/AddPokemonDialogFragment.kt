@@ -13,11 +13,6 @@ import com.example.pokemon.R
 
 class AddPokemonDialogFragment : DialogFragment() {
 
-    companion object Constants {
-        const val REQUEST_NAME = "requestKey"
-        const val POKEMON_NAME = "pokemonName"
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,5 +44,10 @@ class AddPokemonDialogFragment : DialogFragment() {
             dismiss()
         }
         return view
+    }
+
+    companion object {
+        const val REQUEST_NAME = "requestKey"
+        const val POKEMON_NAME = "pokemonName"
     }
 }
